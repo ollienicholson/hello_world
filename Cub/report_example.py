@@ -23,8 +23,6 @@ def focus_area_population_narrative(fapop, childrenpop, capacity, occupancy):
         comparisontext = "less than"
 
     text_f = f'''\n\nThe total population of the Focus Area is {fapop:,} with {childrenpop:,} children being between the ages of 0 and 4. The total early learning centre capacity is {capacity:,} versus a centre occupancy of {occupancy:,}. This suggests that currently there is {capacitydelta} {capacitydeltatext}. The combined occupancy rate of the centres is {occupancy:,}/{capacity:,} = {occupancyrate}%. This compares to the national average of 84% (187,285/223,522) showing that occupancy is {comparisontext} the national average.\n\n'''
-#     # .format(printfapop, printchildrenpop, printcapacity, printoccupancy, printcapacitydelta,
-#     #            capacitydeltatext, printoccupancy, printcapacity, occupancyrate, comparisontext)
 
     print(text_f)
     return text_f
