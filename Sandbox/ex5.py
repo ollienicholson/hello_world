@@ -26,3 +26,6 @@ print(f"His teeth are usualy {teeth} depending on the coffee")
 total = age + height + weight
 
 print(f"If I add {age}, {height}, and {weight} I get {total}.")
+
+
+# finished on page 49 on 27.11.22
