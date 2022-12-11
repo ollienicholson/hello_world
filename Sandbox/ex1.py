@@ -1,7 +1,0 @@
-print('hello')
-print('hello again')
-print('i like typing this.')
-print('this is fun')
-print('Yay printing')
-print('oooooooow')
-print('ahhhhhhh')
