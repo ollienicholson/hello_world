@@ -1,4 +1,3 @@
-
 # this is how a list functions; you call data using only numbers e.g. [1]
 
 # things = ['a', 'b', 'c', 'd']
@@ -10,7 +9,6 @@
 
 # print(things)
 # print('\nthe above is a list')
-
 
 # now lets compare the above to a dictionary or 'dict'
 
@@ -42,7 +40,7 @@
 # del stuff[2]
 # print(stuff)
 
-# now lets run an exercise pg. 161
+# ====== now lets run an exercise pg. 161
 
 # create a mapping of state to abbreviation
 states = {
@@ -54,11 +52,7 @@ states = {
 }
 
 # create a basic set of states and some cities in them
-cities = {
-    'CA': 'San Francisco',
-    'MI': 'Detriot',
-    'FL': 'Jacksonville'
-}
+cities = {'CA': 'San Francisco', 'MI': 'Detriot', 'FL': 'Jacksonville'}
 
 # add some more cities
 cities['NY'] = 'New York'
@@ -75,7 +69,7 @@ print("Michigan's abbreviation is: ", states['Michigan'])
 print("Florida's abbreviation is: ", states['Florida'])
 
 # print some states using the state then city dict
-print('- '*20)
+print('- ' * 20)
 print("Michigan has: ", cities[states['Michigan']])
 print("Florida has: ", cities[states['Florida']])
 
@@ -85,7 +79,7 @@ for state, abbrev in list(states.items()):
     print(f"{state} is abbreviated {abbrev}")
 
 # print every city in state
-print('- '*10)
+print('- ' * 10)
 for abbrev, city in list(cities.items()):
     print(f"{abbrev} has the city {city}")
 
