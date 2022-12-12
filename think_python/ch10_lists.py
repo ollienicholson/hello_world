@@ -1,8 +1,8 @@
 # ============= Learn Python: Chapter 10, Pg 107 exercises =============
 
-t = ['one', 'two', 'three', 'four', 'Five', 'Six']
-n = [1, 2, 3, 4, 5]
-m = ["TEAM"]
+# t = ['one', 'two', 'three', 'four', 'Five', 'Six']
+# n = [1, 2, 3, 4, 5]
+# m = ["TEAM"]
 
 # def add_all(n):
 #     total = 0
@@ -30,3 +30,26 @@ m = ["TEAM"]
 # print(only_upper(m))
 
 # print("Printing t: ", t)
+
+# ======= page 113 =======
+# words = "The hills are alive"
+
+# words2 = words.split()
+# print(words2)
+
+# a = "spam.spam.spam"
+
+# this = "."
+# b = a.split(this)
+
+# print(b)
+
+# end = " "
+
+# newwords = end.join(words2)
+
+# print(newwords)
+
+one = "banana"
+two = "banana"
+print(one is two)
