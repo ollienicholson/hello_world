@@ -1,3 +1,5 @@
+# ex18, pg 83
+
 # this one is like your scripts with argv
 
 

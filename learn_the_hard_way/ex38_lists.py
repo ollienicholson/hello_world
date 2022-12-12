@@ -33,39 +33,3 @@
 # # top 10 movies
 # # top 10 car manufacturers
 # # top 10...anything
-
-t = ['one', 'two', 'three', 'four', 'Five', 'Six']
-n = [1, 2, 3, 4, 5]
-
-
-def add_all(n):
-    total = 0
-    for x in n:
-        total += x
-    return total
-
-
-print("Add all:", add_all(n))
-
-
-def capitalise_all(t):
-    res = []
-    for s in t:
-        res.append(s.capitalize())
-    return res
-
-
-print("Capitalise all:", capitalise_all(t))
-
-
-def only_upper(t):
-    res = []
-    print(res)
-    for s in t:
-        if s.isupper():
-            res.append(s)
-    print(res)
-    return res
-
-
-print(t)
