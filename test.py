@@ -7,4 +7,28 @@ def function(x, y):
         return -1
 
 
-print(function(2, 1))
+# print(function(2, 1))
+
+my_tuple = 1, 2, 3, 4, 5
+
+my_list = [2, 4, 6, 8, 10]
+
+my_dict = {
+    "One": "1",
+    "Two": "2",
+    "Three": "3",
+}
+
+
+# === playing around with loops ===
+def loop(items: int or list) -> int:
+    result = sum([i * i for i in items])
+    print(items, "this is i")
+    print(result, "this is post-i")
+    return result
+
+
+def new_loop(items: list) -> list:
+    items.reverse()
+    items.append(20)
+    items.pop(0)
