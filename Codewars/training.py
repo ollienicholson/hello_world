@@ -14,3 +14,15 @@ def squre_me(numbers):
 
 
 print(squre_me([5, 10]))
+
+
+# =======
+
+name = "sam harris"
+
+
+def func(i):
+    return ".".join(word[0].upper() for word in i.split())
+
+
+func(name)
