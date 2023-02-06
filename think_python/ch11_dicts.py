@@ -147,4 +147,3 @@ pp(
     width=1,
 )
 pp(known, depth=1)
-pp("this")
