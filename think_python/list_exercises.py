@@ -7,7 +7,9 @@
 
 t = [[1, 2], [3], [4, 5, 6]]
 
-numbers = [1, 2, 3, 4, 5, 1, 4, 5]
+numbers_t = 1, 2, 3, 4, 5, 1, 4, 5
+numbers_list = [1, 2, 3, 4, 5, 6, 7, 8]
+anagrams = ['listen', 'silent']
 
 
 def nested_sum(t):
@@ -53,4 +55,83 @@ def middle(t):
     ]  # start at index 1, finish at index index -2. Returns all but the first and last elements in a list
 
 
-print(middle(numbers))
+# print(middle(numbers_t))
+
+# === ex 10-4 ===
+
+
+def chop(t: list) -> None:
+    '''
+    Removed the first and last element of t
+    
+    takes a list
+    t: list
+    numbers_list: list
+
+    returns: None
+    '''
+    del t[0]
+    del t[-1]
+
+
+# print(chop(numbers_list)) # returns none
+# print(numbers_list) # prints the chopped list
+
+# === ex 10-5 ===
+
+
+def is_sorted(t: bool) -> bool:
+    '''
+    Check whether a list is sorted.
+    
+    t: list
+    
+    returns: Boolean
+    '''
+    return t == sorted(t)
+
+
+# print(is_sorted(t))
+
+# === ex 10-6 ===
+
+
+def is_anagraam(word1: str or list, word2: str or list) -> bool:
+    '''
+    Check whether two words are anagrams
+    
+    word1: string or list
+    word2: string or list
+    
+    returns boolean
+    '''
+    return sorted(word1) == sorted(word2)
+
+
+# print(is_anagraam('listen', 'silent'))
+# print(is_anagraam('fired', 'fried'))
+# print(is_anagraam('sent', 'send'))
+
+
+def has_duplicates(s: str or list) -> bool:
+    '''
+    Returns True is any element appears more than once in a sequence
+    
+    s: string or list
+    
+    returns: bool
+    '''
+    # make a copy of t to avoid modiying the parameter
+    t = list(s)
+    t.sort()
+
+    # check for adjacent elements that are equal
+    for i in range(len(t) - 1):
+        if t[i] == t[i + 1]:
+            return True
+    # if no duplicates return false
+    return False
+
+
+print(has_duplicates('abbcd'))
+print(has_duplicates('abcde'))
