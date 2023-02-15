@@ -38,4 +38,6 @@
 # else:
 #     for row in values:
 #         print(row)
-# In this code, credentials.json is the file containing your API credentials, spreadsheet_id is the ID of the spreadsheet you want to access, and range_name is the range of cells you want to read (in this case, cells A1 to B2 on the first sheet). The result variable contains the data that was read from the spreadsheet, which is then printed to the console.
+#
+# In this code, credentials.json is the file containing your API credentials, spreadsheet_id is the ID of the spreadsheet you want to access, and range_name is the range of cells you want to read (in this case, cells A1 to B2 on the first sheet).
+# The result variable contains the data that was read from the spreadsheet, which is then printed to the console.

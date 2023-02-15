@@ -13,8 +13,7 @@ def squre_me(numbers):
     return result
 
 
-print(squre_me([5, 10]))
-
+# print(squre_me([5, 10]))
 
 # =======
 
@@ -26,3 +25,5 @@ def func(i):
 
 
 func(name)
+
+
