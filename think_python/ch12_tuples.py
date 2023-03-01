@@ -1,3 +1,5 @@
+from structshape import structshape
+
 t = 'a', 'b', 'c', 'd', 'e', 'f',  # <class 'tuple'>
 t1 = ('a', 'b', 'c', 'd', 'e', 'f')  # <class 'tuple'>
 t5 = ('a', 'b', 'c', 'd', 'e', 'f')  # <class 'tuple'>
@@ -94,8 +96,37 @@ def has_match(tup1, tup2):
         return False
 
 
-print(has_match(t1, t))
+# print(has_match(t1, t))
 
 #  traverse through elements of a sequence and return both the element and respective indices
 for index, element in enumerate('abcd'):
-    print(index, element)
+    # print(index, element)
+    pass
+
+dic = {'a': 0, 'b': 1, 'c': 2, 'd': 4}
+tuple_dict = dic.items()
+
+print(tuple_dict)  # convert dict to tuple
+
+for key, value in dic.items():
+    print(key, value)
+
+tt = ('a', 0), ('b', 1), ('c', 2), ('d', 4)
+
+dd = dict(tt)  # convert list of tuples into list of dictionaries
+
+print(dd)
+
+d = dict(
+    zip(['doh', 'rae', 'mee'], range(3))
+)  # concise way to create a dictionary
+print(d)
+
+directory = {'john': 'cleese', 'peter': 'theil', 'issy': 'jackson'}
+
+number = 1234, 4576, 5679
+
+# for first, last in directory:
+#     print(first, last, directory[last, first])
+
+print(structshape(dic), ">> structshape")
