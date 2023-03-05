@@ -17,3 +17,12 @@ print(is_isogram("heLlo"))
 print(is_isogram("true"))
 
 
+def is_isogram(string):
+    return len(string) == len(set(string.lower()))
+
+
+def is_isogram(string):
+    s = set(string.lower())
+    if len(s) == len(string):
+        return True
+    return False
