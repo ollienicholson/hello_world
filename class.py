@@ -73,4 +73,35 @@ def new_rectangle(rect, dx, dy):
     rect.corner.y += dy
 
 
-print(new_rectangle(box, 5, 10))
+# print(new_rectangle(box, 5, 10))
+
+p1 = Point()
+p1.x = 5
+p1.y = 10
+
+import copy
+
+p2 = copy.copy(p1)
+
+# print(p2.x)
+# print(p2.y)
+# print(p1 is p2)
+# print(p1 == p2)
+
+box2 = copy.copy(box)
+# print(box2.width)
+# print(box2.corner.x)
+
+# print(box2 is box)
+# print(box2.corner is box.corner, "box2")
+
+box3 = copy.deepcopy(box)
+
+print(box3 is box)
+print(box3.corner is box.corner, "box 3")
+
+print(type(box))
+print(isinstance(blank, Rectangle))
+
+print(hasattr(box, 'width'))
+print(hasattr(p1, 'x'))
