@@ -97,11 +97,11 @@ box2 = copy.copy(box)
 
 box3 = copy.deepcopy(box)
 
-print(box3 is box)
-print(box3.corner is box.corner, "box 3")
+# print(box3 is box)
+# print(box3.corner is box.corner, "box 3")
 
-print(type(box))
-print(isinstance(blank, Rectangle))
+# print(type(box))
+# print(isinstance(blank, Rectangle))
 
-print(hasattr(box, 'width'))
-print(hasattr(p1, 'x'))
+# print(hasattr(box, 'width'))
+# print(hasattr(p1, 'x'))
