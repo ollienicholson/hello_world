@@ -1,4 +1,8 @@
-from tkinter import *
+# Result:
+# GUI runs, alarm clock does not ring at se time, otherwise works as expected
+# https://data-flair.training/blogs/alarm-clock-python/
+
+from tkinter import Tk, Label, StringVar, Entry, Button
 import datetime
 import time
 import winsound
@@ -78,6 +82,3 @@ submit = (
 
 # run the window
 clock.mainloop()
-
-# Result:
-# GUI runs, alarm clock does not ring at se time, otherwise works as expected
