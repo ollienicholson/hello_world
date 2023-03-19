@@ -1,3 +1,7 @@
+'''
+Python projects
+'''
+
 # https://techvidvan.com/tutorials/python-message-encode-decode/
 
 # https://techvidvan.com/tutorials/python-project-file-manager/
@@ -13,3 +17,7 @@
 #  https://github.com/dataiteam/Object-Oriented-Programming
 
 # https://www.pythonguis.com/pyqt5/
+'''
+SQL tutorials
+'''
+# https://data-flair.training/blogs/sql-tutorials-home/#tutorials
