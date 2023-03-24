@@ -18,3 +18,13 @@ string = "hello"
 char = 'l'
 
 print(str_count(string, char))
+
+# option B
+def strCount(string, letter):
+    return string.count(letter)
+
+# option C
+
+strCount = str.count
+
+print(strCount(string, char))
