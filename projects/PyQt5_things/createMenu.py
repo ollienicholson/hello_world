@@ -37,5 +37,3 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = App()
     sys.exit(app.exec())
-
-# next up : PyQt5 Tutorial – Setting Absolute Position
