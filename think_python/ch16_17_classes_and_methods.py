@@ -13,30 +13,79 @@ def valid_time(time):
 
 
 class Time:
-    '''Represents the time of day.
-    attributes: hour, minute, second
     '''
+    Represents the time of day.
+    
+    attributes: hour, minute, second.
+    '''
+    def __init__(self, hour=0, minute=0, second=0):
+        self.hour = hour
+        self.minute = minute
+        self.second = second
+
+    def __str__(self):
+        # returns a string representation of time in hh.mm.ss
+        return '%.2d:%.2d:%.2d' % (self.hour, self.minute, self.second)
+
+    def print_time(self):
+        '''prints a string representation of time in hh.mm.ss '''
+        print(str(self))
+
+    def is_after(self, other):
+        return self.time_to_int() > other.time_to_int()
+
+        # converts time o integers
+    def time_to_int(time):
+        minutes = time.hour * 60 + time.minute
+        seconds = minutes * 60 + time.second
+        return seconds
+
+    # print(time_to_int(start))  # == 35160 seconds
+
+    def increment(self, seconds):
+        seconds += self.time_to_int()
+        return int_to_time(seconds)
 
 
-time = Time()
-time.hour = 11
-time.minute = 59
-time.second = 30
+def int_to_time(seconds):
+    time = Time()
+    minutes, time.second = divmod(seconds, 60)
+    time.hour, time.minute = divmod(minutes, 60)
+    return time
 
 
-def print_time(time):
-    # returns a string representation of time in hh.mm.ss
-    return '%.2d:%.2d:%.2d' % (time.hour, time.minute, time.second)
+# time = Time()
+# time.hour = 11
+# time.minute = 59
+# time.second = 30
 
+start = Time()
+start.hour = 24
+start.minute = 45
+start.second = 30
+
+duration = Time()
+duration.hour = 1
+duration.minute = 35
+duration.second = 0
+
+time = Time(9, 45, 30)
+# print(time.print_time(), ">> time.print_time()")
+print(time, ">> time")
+
+# print(Time.print_time(start), ">> Time.print_time(start)")
+Time.print_time(start)
+
+# print(start.print_time(), ">> start.print_time()")
 
 # print(print_time(time))
+end = start.increment(1337)
+# print(end.print_time(), ">> end.print_time()")
 
+print(end.is_after(start), ">>> end.is_after(start)")
+# prints out True or False as per the function above
 
-def is_after(t1, t2):
-    print(t1 > t2)
-
-
-# is_after(50, 30)
+# time.is_after(50, 30)
 
 # Pure Functions
 # --------------
@@ -58,16 +107,6 @@ def add_time(t1, t2):
 
     return sum
 
-
-start = Time()
-start.hour = 24
-start.minute = 45
-start.second = 30
-
-duration = Time()
-duration.hour = 1
-duration.minute = 35
-duration.second = 0
 
 # done = add_time(start, duration)
 # print(print_time(done), "print_time(done)")
@@ -131,16 +170,8 @@ newTime = new_add_time(start, duration)
 
 newTime1 = new_add_time1(start, duration)
 
-print(print_time(newTime), "print_time(done)")  # == 11:20:30
+# print(Time.print_time(newTime), "print_time(done)")  # == 11:20:30
 
-print(print_time(newTime1), "print_time(done)")  # == 11:20:30
-
-
-def increment(t1, seconds):
-    """Adds seconds to a Time object."""
-    assert valid_time(t1)
-    seconds += time_to_int(t1)
-    return int_to_time(seconds)
-
+# print(Time.print_time(newTime1), "print_time(done)")  # == 11:20:30
 
 thistime = increment(start, 30), "increment(newTime, 30)"
