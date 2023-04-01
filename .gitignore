@@ -1,4 +1,5 @@
 # README
 MVC/*.md
 
-MVC/*.pyc
+# PyCache
+*.pyc
