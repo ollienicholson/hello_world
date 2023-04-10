@@ -46,10 +46,18 @@ class Kangaroo:
         # As a general rule, you should avoid using a mutable
         # object as a default value, unless you really know
         # what you are doing.
+        
+        # ====================
+        # self.name = name
+        # if contents == None:
+        #     contents = []
+        # self.pouch_contents = contents
+        # ====================
+
+    # NOTE: Lets re_write __init__ using a conditional statement
+    
         self.name = name
-        if contents == None:
-            contents = []
-        self.pouch_contents = contents
+        self.pouch_contents = [] if contents == None else contents
 
     def __str__(self):
         """Return a string representaion of this Kangaroo.
