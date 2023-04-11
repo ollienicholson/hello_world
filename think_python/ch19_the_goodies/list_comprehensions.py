@@ -32,11 +32,20 @@ def only_upper(t):
     return res
 
 
-print(only_upper(this))
+# print(only_upper(this))
 
 
 def only_upper_new(t):
     return [s for s in t if s.isupper()]
 
 
-print(only_upper_new(this))
+# print(only_upper_new(this))
+
+my_tuple = (1, 2, 3, 3, 4, 5, 5)
+my_set = set(my_tuple)
+
+print(my_set)
+# RETURNS {1, 2, 3, 4, 5}
+# NOTE: the set function removes duplicates
+
+    # see sets.py for more info
