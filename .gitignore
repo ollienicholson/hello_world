@@ -3,3 +3,6 @@ MVC/*.md
 
 # PyCache
 *.pyc
+
+# mage-ai
+[ollie-ETL]
