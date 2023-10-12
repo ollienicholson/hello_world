@@ -22,4 +22,3 @@ def longest2(a1, a2):
 
 # print(longest(a, b))
 # print(longest2(a, b))
-

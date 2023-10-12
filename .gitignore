@@ -9,3 +9,10 @@ MVC/*.md
 mage_ai
 ~
 demo_etl_pipeline
+
+#kindello
+kindello_test
+
+# outputs
+*.csv
+*.xlsx
