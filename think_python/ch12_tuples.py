@@ -106,21 +106,21 @@ for index, element in enumerate('abcd'):
 dic = {'a': 0, 'b': 1, 'c': 2, 'd': 4}
 tuple_dict = dic.items()
 
-print(tuple_dict)  # convert dict to tuple
+# print(tuple_dict)  # convert dict to tuple
 
-for key, value in dic.items():
-    print(key, value)
+# for key, value in dic.items():
+#     print(key, value)
 
 tt = ('a', 0), ('b', 1), ('c', 2), ('d', 4)
 
 dd = dict(tt)  # convert list of tuples into list of dictionaries
 
-print(dd)
+# print(dd)
 
 d = dict(
     zip(['doh', 'rae', 'mee'], range(3))
 )  # concise way to create a dictionary
-print(d)
+# print(d)
 
 directory = {'john': 'cleese', 'peter': 'theil', 'issy': 'jackson'}
 
@@ -129,4 +129,143 @@ number = 1234, 4576, 5679
 # for first, last in directory:
 #     print(first, last, directory[last, first])
 
-print(structshape(dic), ">> structshape")
+# print(structshape(dic), ">> structshape")
+
+
+
+'''Ollie @ 16/10/23 --> https://realpython.com/python-tuple/'''
+
+red = (250, 0, 0)
+# print(type(red))
+
+blue = 'Blue' # without a comma, its a string
+blue = 'Blue', # with a comma, it becomes a tuple
+# print(type(blue))
+
+numbers = tuple(['one', 2, 'three'])
+# print(numbers[-1]) # gives me the last element
+# print(numbers[-2]) # gives me the second to last element
+
+plane = ({
+    "manufacturer": "boeing",
+    "model":"747",
+    "passengers":416,
+}.values())
+
+# print(plane)
+this = tuple(x**2 for x in range(11))
+
+# print(len(this)) # will return the number of outputs
+
+# NESTED TUPLE
+employee = (
+    "John",
+    35,
+    "Python Developer",
+    ("Django", "Flask", "FastAPI", "CSS", "HTML"),
+)
+
+# print(employee[-1]) #this returns all elements in the next tuple 
+# print(employee[-1][4]) #this returns the last element in the nested tuple in employee i.e. HTML
+
+# SLICING A TUPLE
+# --> tuple_object[start:stop:step]
+
+# IMMUTABILITY
+# employee[1] = 30
+# TypeError: 'tuple' object doesn't support item deletion
+
+student_info = ("Linda", 18, ["Math", "Physics", "History"])
+# print(student_info)
+
+# you can manipulate nested mutable elements within a immutable object
+student_info[2][2] = "Computer science"
+# print(student_info) 
+
+# Packing and Unpacking Tuples
+
+point = (7, 14, 21)
+
+x, y, z = point
+
+# print(x)
+
+new_num = (1, 2, 3, 4, 5)
+
+*head, last = new_num # using the unpacking/packing operator you can assign multiple values to one variable
+# print(head, last)
+
+first, *_ = new_num # disposable variables! when you only need one, not all of the variabled from new_num
+
+# print(*point, *new_num) # merging tuples into one by using the * operator to unpack --> returns 7 14 21 1 2 3 4 5
+
+# CONCATENATING AND REPEATING TUPLES
+
+
+days = (
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+)
+
+# print(tuple(reversed(days)))
+
+reversed_days = days[::-1]
+
+# print(reversed_days) returns the same as above using the slicing operator[start; stop; step]
+
+# print(id(days) == id(reversed_days)) = FALSE --> no longer share the same id
+
+# sorted(days) # sorts alphabetically
+
+sorted(days) # sorts alphabetically
+
+fruits = (("apple", 0.40), ("banana", 0.25), ("orange", 0.35))
+
+# print(fruits[1][1])
+
+# print(sorted(fruits, key=lambda fruit: fruit[1]))
+
+
+# TRAVERSING TUPLE IN PYTHON
+monthly_incomes = (
+    ("January", 5000),
+    ("February", 5500),
+    ("March", 6000),
+    ("April", 5800),
+    ("May", 6200),
+    ("June", 7000),
+    ("July", 7500),
+    ("August", 7300),
+    ("September", 6800),
+    ("October", 6500),
+    ("November", 6000),
+    ("December", 5500)
+    )
+
+
+total_income = 0
+for income in monthly_incomes:
+    total_income += income[1]
+
+
+# print(total_income)
+
+
+
+quarter_income = 0
+
+for index, (month, income) in enumerate(monthly_incomes, start=1):
+    print(f"{month:>10}: {income}")
+    # in the above f-string, the greater than ( > ) symbol indicates how far in an f-string is indented
+    quarter_income += income
+    if index % 3 == 0:
+        print("-" * 20)
+        print(f"{'Quarter':>10}: {quarter_income}", end="\n\n")
+        quarter_income = 0
+        
+        

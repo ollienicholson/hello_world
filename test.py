@@ -1,3 +1,5 @@
+# import numpy as np
+
 def function(x, y):
     if x > y:
         return 1
@@ -32,3 +34,6 @@ def new_loop(items: list) -> list:
     items.reverse()
     items.append(20)
     items.pop(0)
+    
+
+
