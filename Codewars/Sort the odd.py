@@ -6,16 +6,17 @@ numbers = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 
 def sort_array(source):
     odd_list = []
-    new_list = []
+    index = []
     
     for i, num in enumerate(source):
         if num % 2 != 0:
             odd_list.append(num)
-            new_list.append(i)    
+            index.append(i)    
             
     odd_list.sort()
-
-    for i, num in zip(new_list, odd_list):
+    
+    for i, num in zip(index, odd_list):
+        print(i, num, 'i & num')
         source[i] = num
     return source
             
