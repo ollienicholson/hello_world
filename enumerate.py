@@ -63,6 +63,6 @@ def my_enumerate(sequence, start=0):
         n += 1
 
 seasons = ["Spring", "Summer", "Fall", "Winter"]
-print(my_enumerate(seasons)) # returns <generator object my_enumerate at 0x00000299B858AF90>
+# print(my_enumerate(seasons)) # returns <generator object my_enumerate at 0x00000299B858AF90>
 
 print(list(my_enumerate(seasons)), '\n') # returns [(0, 'Spring'), (1, 'Summer'), (2, 'Fall'), (3, 'Winter')]
