@@ -21,14 +21,17 @@ my_dict = {
 
 
 # === playing around with loops ===
-def loop(items: int or list) -> int:
+def loop(items):
     result = sum([i * i for i in items])
     print(items, "this is i")
     print(result, "this is post-i")
     return result
 
 
-def new_loop(items: list) -> list:
+def new_loop(items):
     items.reverse()
     items.append(20)
     items.pop(0)
+
+
+print("hello world")
