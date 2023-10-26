@@ -1,0 +1,18 @@
+# README
+MVC/*.md
+
+# PyCache
+*.pyc
+
+# mage-ai
+[ollie-ETL]
+mage_ai
+~
+demo_etl_pipeline
+
+#kindello
+kindello_test
+
+# outputs
+*.csv
+*.xlsx

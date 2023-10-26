@@ -1,3 +1,5 @@
+# import numpy as np
+
 def function(x, y):
     if x > y:
         return 1
