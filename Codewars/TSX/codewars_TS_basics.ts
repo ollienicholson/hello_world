@@ -38,3 +38,24 @@ export var var1Boolean_1: boolean = true,
           var13Null_1 : null =null,
           var14Undefined_1  : undefined = undefined,
           var15NeverFunction_1 = function():never  { throw new Error(); };
+
+
+// remove all white space from a string
+export function noSpace(x:string):string {
+    x = x.replace(/\s+/g, '')
+    return x
+  }
+// alts
+export function noSpace_1(x:string):string {
+    return x.replace(/\s/g, '');
+  }
+
+export const noSpace_2 = (x: string) => x.split(' ').join('');
+
+// Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+export const summation = (num:number)=> { 
+    return (num * (num + 1)) / 2
+  }
+// alts
+export const summation_1 = (num:number) => num * (num + 1) / 2;
+
