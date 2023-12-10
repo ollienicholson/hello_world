@@ -5,13 +5,14 @@
 # but years divisible by 400 are leap years.
 # Tested years are in range 1600 ≤ year ≤ 4000.
 
+
 def is_leap_year(year):
     return True if year % 4 == 0 and not year % 100 == 0 or year % 400 == 0 else False
 
-def is_leap_year(year):
+def is_leap_year_2(year):
     return (year % 100 and not year % 4) or not year % 400
 
-def is_leap_year(year):
+def is_leap_year_3(year):
     return True if ((year % 4 == 0 and year % 100 != 0) or year % 400 == 0) else False
 
 
@@ -30,7 +31,7 @@ def noonerize(numbers):
     return abs(num1 - num2)
 
 
-def noonerize(numbers):
+def noonerize_2(numbers):
     if not all(isinstance(n, int) for n in numbers):
         return 'invalid array'
     a, b = map(str, numbers)
@@ -80,14 +81,14 @@ def whose_move(last_player, win):
 def whoseMove(lastPlayer, win):
     return lastPlayer if win else 'white' if lastPlayer == 'black' else 'black'
 
-def whoseMove(lastPlayer, win):
+def whoseMove_2(lastPlayer, win):
     players = ['white', 'black']
     return lastPlayer if win else players[players.index(lastPlayer) - 1]
 
-def whoseMove(lastPlayer, win):
+def whoseMove_3(lastPlayer, win):
     return ["white", "black"][(lastPlayer == "black") == win]
 
-def whoseMove(lastPlayer, win):
+def whoseMove_4(lastPlayer, win):
     if lastPlayer == 'black':
         if win == True:
             return 'black'
@@ -98,3 +99,102 @@ def whoseMove(lastPlayer, win):
             return 'white'
         else:
             return 'black'
+
+
+
+# In this Kata, you will be given an array of numbers in which two numbers occur once and the rest occur only twice. Your task will be to return the sum of the numbers that occur only once.
+
+# For example, repeats([4,5,7,5,4,8]) = 15 because only the numbers 7 and 8 occur once, and their sum is 15. Every other number occurs twice.
+def repeats(arr):
+    z = [x for x in arr if arr.count(x) == 1]
+    return z[0] + z[1]
+
+# alts
+from collections import Counter
+
+def repeats_2(arr) -> int:
+    element_count = Counter(arr)
+    unique_e = [element for element, count in element_count.items() if count == 1]
+    return unique_e[0]+unique_e[1]
+
+
+# You're given a two-dimensional array of integers matrix. Your task is to determine the smallest non-negative integer that is not present in this array.
+# Input/Output
+# [input] 2D integer array matrix
+# A non-empty rectangular matrix.
+# 1 ≤ matrix.length ≤ 10
+# 1 ≤ matrix[0].length ≤ 10
+# [output] an integer
+# The smallest non-negative integer that is not present in matrix.
+matrix = [[4, 5, 3, 21, 3, 8],
+            [2, 2, 6, 5, 10, 9],
+            [7, 5, 6, 8, 2, 6],
+            [1, 4, 7, 8, 9, 0],
+            [1, 3, 6, 5, 5, 1],
+            [2, 7, 3, 4, 4, 3]]
+
+import numpy as np
+matrix_np = np.array([[4, 5, 3, 21, 3, 8],
+            [2, 2, 6, 5, 10, 9],
+            [7, 5, 6, 8, 2, 6],
+            [1, 4, 7, 8, 9, 0],
+            [1, 3, 6, 5, 5, 1],
+            [2, 7, 3, 4, 4, 3]])
+
+def smallest_integer(matrix):
+#   to flatten a 2D matrix we loop over matrix and then over item wrapped in list comprehension
+    flat = [item for list in matrix for item in list]
+#   put the list into a set for fast iteration
+    elements_set = set(flat)
+#   set a while loop to iterate through non-negative numbers
+    missing_integer = 0
+    while missing_integer in elements_set:
+        missing_integer += 1
+    return missing_integer
+
+# alts
+# 
+# IMPORTANT NOTE ON SUM
+# 
+# nums = set(sum(matrix, []))
+# 
+# The sum() function is typically used to add numbers together, but it can also be used to concatenate lists. 
+# In this context, sum() is used to flatten the matrix from a list of lists into a single list. 
+# It starts with the second argument [] (an empty list) and adds elements of matrix to it.
+
+# For example, if matrix is [[1, 2], [3, 4]], the sum() call will do the following:
+
+# Start with an empty list: []
+# Add the first sublist: [] + [1, 2] = [1, 2]
+# Add the second sublist: [1, 2] + [3, 4] = [1, 2, 3, 4]
+# So after this call, we would have a single list [1, 2, 3, 4].
+
+# The set() function THEN takes an iterable and returns a new set object, a collection of unordered unique elements. 
+# By passing the flattened list to set(), you're converting the list to a set, which removes any duplicate elements.
+
+# Continuing with the above example, if the flattened list was [1, 2, 3, 4, 1], converting it to a set would result in {1, 2, 3, 4}. Note that in a set, the order of the elements is not guaranteed.
+
+def smallest_integer_2(matrix):
+    # nums = set(sum(matrix, []))
+    nums_2 = set(matrix.flatten())
+    print(nums_2)
+    n = 0
+    # while n in nums: n += 1
+    while n in nums_2: n += 1
+    return n
+
+print(smallest_integer_2(matrix_np))
+
+
+from itertools import filterfalse, chain, count
+def smallest_integer_3(matrix):
+    return next(filterfalse(set(chain.from_iterable(matrix)).__contains__, count()))
+
+
+def smallest_integer_4(matrix):
+    i=0
+    while np.isin(i,matrix):
+        i+=1
+    else:
+        return i
+
