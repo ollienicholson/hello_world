@@ -1,4 +1,8 @@
+# advent of code day 2
+
 sum = 0
+first_num = 0
+last_num = 0
 
 with open('day2.txt', 'r') as file:
     for line in file:
