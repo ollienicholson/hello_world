@@ -23,11 +23,10 @@ with open('games.txt', 'r') as file:
         green_valid = True
         blue_valid = True
         red_valid = True
-            
+
         # iterate through each row of games and return each hand
         for hand_1 in games:
             hand_1 = hand_1.split(", ")
-            
             
             for item in hand_1:
                 value, colour = item.strip().split(" ")
