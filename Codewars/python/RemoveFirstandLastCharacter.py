@@ -8,13 +8,13 @@ print(remove_char(text))
 
 # other solutions --
 
-def remove_char(s):
+def remove_char1(s):
     return s[1 : -1]
 
-def remove_char(s):
+def remove_char2(s):
     return '' if len(s) <= 2 else s[1:-1]
 
-def remove_char(s):
+def remove_char3(s):
     s = list(s)
     s.pop()
     s.pop(0)

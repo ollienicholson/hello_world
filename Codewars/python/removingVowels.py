@@ -12,3 +12,13 @@ def disemvowel(string_):
     vowels = 'aeiouAEIOU'
     results = ''.join([char for char in string_ if char not in vowels])
     return results
+
+# alts
+def disemvowel1(string):
+    return "".join(c for c in string if c.lower() not in "aeiou")
+
+def disemvowel2(s):
+    for i in "aeiouAEIOU":
+        s = s.replace(i,'')
+    return s
+
