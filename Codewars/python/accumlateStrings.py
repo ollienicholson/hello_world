@@ -17,3 +17,9 @@ def accum(s):
     # Join the parts with hyphens and return
     return '-'.join(result)
 
+# alts
+def accum2(s):
+    return '-'.join(c.upper() + c.lower() * i for i, c in enumerate(s))
+
+def accum3(s):
+    return '-'.join((a * i).title() for i, a in enumerate(s, 1))
