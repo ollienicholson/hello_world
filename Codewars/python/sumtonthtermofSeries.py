@@ -15,10 +15,11 @@
 # 5 --> 1 + 1/4 + 1/7 + 1/10 + 1/13 --> "1.57"
 
 def series_sum(n):
-    # Happy Coding ^_^
-    if n == 1:
-        return "1.00"
-    sum = 1
-    for i in range(1, n):
-        sum+=1/(3*i+1)
-    return str(round(sum, 2))
+    sum = 0
+    for i in range(0, n):
+        sum += 1 / ( 3 * i + 1)
+    return "{:.2f}".format(sum)
+
+# alts
+def series_sum2(n):
+    return '{:.2f}'.format(sum(1.0/(3 * i + 1) for i in range(n)))
