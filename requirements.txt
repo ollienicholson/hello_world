@@ -88,7 +88,7 @@ traitlets @ file:///C:/b/abs_e5m_xjjl94/croot/traitlets_1671143896266/work
 trio==0.22.2
 trio-websocket==0.10.4
 typing_extensions @ file:///C:/b/abs_a1bb332wcs/croot/typing_extensions_1681939523095/work
-urllib3==2.0.4
+urllib3==2.0.7
 wcwidth @ file:///Users/ktietz/demo/mc3/conda-bld/wcwidth_1629357192024/work
 wsproto==1.2.0
 zipp @ file:///C:/b/abs_b9jfdr908q/croot/zipp_1672387552360/work
